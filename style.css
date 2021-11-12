@@ -1,0 +1,432 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Noto+Sans+TC:wght@100;400;700&display=swap');
+
+@font-face {
+    font-family: Audrey-Normal;
+    src        : url(webfont/Audrey-Normal.otf);
+}
+
+@font-face {
+    font-family: 華康明體;
+    src        : url(webfont/DFMingStd-W3.otf);
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", Arial, Helvetica, "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+img {
+    display: block;
+    width  : 100%;
+}
+
+/* 共用的背景顏色 */
+.darkblue {
+    background-color: #253546;
+}
+
+.pink {
+    background-color: #f9e2da;
+}
+
+header {
+    position             : relative;
+    background-image     : url('images/banner.jpg');
+    background-size      : cover;
+    /* 背景圖片覆蓋全部，自動拉伸圖像 */
+    background-attachment: fixed;
+    background-position  : center;
+    height               : 100vh;
+    overflow             : hidden;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+header .menu {
+    position: absolute;
+    right   : 40px;
+    top     : 50px;
+    animation: menu 3s forwards;
+}
+@keyframes menu{
+    from{right: 100px;}
+    to{right: 40px;}
+}
+
+.menu a {
+    display        : block;
+    width          : 100px;
+    height         : 35px;
+    line-height    : 35px;
+    text-align     : center;
+    color          : white;
+    text-decoration: none;
+    border         : solid 1px transparent;
+}
+
+.menu a:hover {
+    border          : solid 1px gray;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.name {
+    position   : absolute;
+    font-size  : 3rem;
+    font-family: Audrey-Normal;
+    text-align : center;
+    color      : white;
+    text-shadow: 0 0 12px #f9e2da98;
+    bottom     : 25%;
+    left       : 35%;
+    animation: name 3s forwards;
+}
+@keyframes name{
+    from{bottom     : 30%;opacity: 0;}
+    to{bottom     : 25%;opacity: 1;}
+}
+
+.followme{
+    display: inline-block;
+    position: absolute;
+    bottom: 35%;
+    right: 3%;
+    animation: followme 2s forwards;
+}
+@keyframes followme{
+    from{right: 5%;}
+    to{right: 3%;}
+}
+.followme p{
+    writing-mode: vertical-rl;
+    color: #fff;
+    text-align: center;
+    
+    padding-left: 10px;
+}
+.followme img{
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    opacity: .8;
+}
+.ch1{
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    writing-mode: vertical-rl;
+    left   : 40px;
+    top     : 50px;
+    font-family    : 華康明體;
+    animation: ch1 2s forwards;
+}
+@keyframes ch1{
+    from{left: -100px;}
+    to{left   : 40px;}
+}
+
+.en1{
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left   : 40px;
+    bottom    : 30px;
+    font-family: Audrey-Normal;
+    animation: en1 2s forwards;
+}
+@keyframes en1{
+    from{bottom: 50px;left: 25%;}
+    to{bottom: 30px;left: 40px;}
+}
+
+
+/* 主要內容區 */
+section {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    /* section內都置中 */
+    height        : 100vh;
+}
+
+#slogan {
+    background-image     : url('images/banner.jpg');
+    background-size      : cover;
+    /* 背景圖片覆蓋全部，自動拉伸圖像 */
+    background-attachment: fixed;
+    background-position  : center;
+}
+
+.slogan {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    position      : relative;
+    top           : 45%;
+}
+
+.slogan h2 {
+    font-size      : 3rem;
+    color          : white;
+    font-family    : 華康明體;
+    letter-spacing : 1.5rem;
+    text-shadow    : 0 0 12px #f9e2da98;
+    animation      : h2 4s forwards;
+    animation-delay: 2s;
+    opacity        : 0;
+}
+
+.slogan p {
+    font-size  : 2rem;
+    color      : white;
+    font-family: Audrey-Normal;
+    animation  : p 4s forwards;
+    opacity    : 0;
+}
+
+@keyframes h2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes p {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ABOUT區 */
+#about {
+    background-image     : url('images/鈴蘭.jpg');
+    background-size      : cover;
+    background-attachment: fixed;
+    background-position  : center;
+    border               : solid 30px #f9e2da;
+}
+.aboutme{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    position      : relative;
+    top: 45%;
+    right: 20%;
+    animation  : about 4s forwards;
+    opacity        : 0;
+}
+
+@keyframes about {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.aboutme h2{
+    padding: 20px;
+    font-family: Audrey-Normal;
+}
+
+/* WORKS區 */
+
+.slide{
+    /* display: flex; */
+}
+
+.img-object{
+    /* flex: 1; */
+    object-fit: cover;
+    width: 100%;
+    height: 100vh
+}
+
+
+
+/* SERVICE區 */
+#service h2 {
+    color        : #fff;
+    font-size    : 1.5rem;
+    margin       : 30px 0;
+    padding      : 10px 20px;
+    border-bottom: solid 5px #f9e2da;
+}
+.service-list{
+    display: flex;
+    width: 80%;
+}
+.service-list .box{
+    flex: 1;
+    margin: 0 20px;
+    height: 75vh;
+    position: relative;
+    background-color: #253546;
+    box-shadow: 2px 2px 5px #ccc;
+    overflow: hidden;
+    border-radius: 25px;
+    top: 20%;
+}
+/* .box figure{
+    height: 100%;
+    overflow: hidden;
+}
+.box figure img{
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    object-fit: cover;
+} */
+.line{
+    display: block;
+    width: 80%;
+    background-color: #253546;
+    font-size: 1px;
+    color: #253546;
+  
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row{
+    width: 100%;
+    height: 100vh;
+    
+}
+.col{
+    text-align: center;
+    top: 40%;
+    color: #fff;
+}
+.col p{
+    padding: 3px;
+}
+
+/* SHOP區 */
+#shop h1 {
+    color        : #444;
+    font-size    : 2.5rem;
+    margin       : 30px 0;
+    padding      : 10px 20px;
+    border-bottom: solid 5px #444;
+}
+.shop-list{
+    display: flex;
+    width: 80%;
+}
+.shop-list div{
+    flex: 1;
+    margin: 0 20px;
+    height: 75vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.shop-list div:first-child{
+    background-image: url('images/shop-1.png');
+}
+.shop-list div:nth-child(2){
+    background-image: url('images/shop-2.png');
+}
+.shop-list div:last-child{
+    background-image: url('images/shop-3.png');
+}
+.shop-list a{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 30%;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.shop-list a:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #253546;
+    text-size-adjust: 1.5;
+}
+/*手機版 */
+@media (max-width: 767px) { 
+    .shop-list article:nth-child(n+2){
+        display: none;
+    }
+}
+/* 平板 */
+@media (min-width: 768px) {
+    .shop-list article:last-child{
+        display: none;
+    }
+}
+/* 桌機版 */
+@media (min-width: 992px) { 
+    .shop-list article:last-child{
+        display: block;
+    }
+}
+
+/* Footer區 */
+footer {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 75px;
+}
+footer .menu a{
+    color: #253546;
+}
+
+#gotop {
+    display            : none;
+    position           : fixed;
+    bottom             : 100px;
+    right              : 30px;
+    width              : 50px;
+    height             : 50px;
+    /* background-color: rgba(68, 68, 68, 0.4); */
+    color              : #fff;
+    cursor             : pointer;
+    /* 游標有手 */
+    font-size          : 50px;
+    line-height        : 45px;
+}
+
+
+/* 手機版 */
+@media (min-width: 767px) { 
+   
+}
+
+/* 平板 */
+@media (min-width: 768px) { 
+   
+ }
+
+/* 桌機版 */
+@media (min-width: 992px) { 
+    
+ }
